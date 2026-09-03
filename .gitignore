@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+data/embeddings.pkl
+data/chroma/
+logs/*.json
+!logs/.gitkeep
+corpus/sources/*.pdf
