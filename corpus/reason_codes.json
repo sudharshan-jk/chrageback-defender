@@ -1,0 +1,818 @@
+[
+  {
+    "code": "4808",
+    "network": "mastercard",
+    "category": "authorization",
+    "title": "Authorization-Related Chargebacks",
+    "short_description": "Used when an error occurred in requesting authorization for a transaction, such as missing authorization, expired protection period, or multiple requests.",
+    "required_evidence": [
+      "authorization_approval_code",
+      "transaction_receipt",
+      "terminal_audit_log"
+    ],
+    "typical_defenses": [
+      "valid_authorization_code",
+      "proof_of_authorization",
+      "swipe_or_dip_log"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Authorization-Related Chargebacks"
+  },
+  {
+    "code": "4834",
+    "network": "mastercard",
+    "category": "processing_error",
+    "title": "Point-of-Interaction Error Chargebacks",
+    "short_description": "Applies to errors made when processing a transaction, including duplicate debits, incorrect amounts, currency errors, or late presentment.",
+    "required_evidence": [
+      "itemized_receipt",
+      "proof_of_separate_transactions",
+      "currency_conversion_log"
+    ],
+    "typical_defenses": [
+      "proof_of_correct_amount",
+      "proof_of_different_services",
+      "settlement_batch_report"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Point-of-Interaction Error Chargebacks"
+  },
+   {
+    "code": "4853",
+    "network": "mastercard",
+    "category": "consumer_dispute",
+    "title": "Cardholder Dispute",
+    "short_description": "Catch-all consumer dispute code covering non-receipt, cancelled recurring transactions, defective or not-as-described goods, credit not processed, and quality complaints. Winning evidence depends on the specific sub-reason cited.",
+    "required_evidence": [
+      "sub_dispute_reason_from_issuer",
+      "proof_of_delivery_or_service_if_non_receipt",
+      "cancellation_policy_and_customer_acknowledgement_if_cancelled",
+      "product_description_and_condition_if_defective",
+      "refund_processing_records_if_credit_not_processed"
+    ],
+    "typical_defenses": [
+      "delivery_tracking_and_signed_pod_for_non_receipt_claim",
+      "signed_cancellation_terms_shown_at_checkout",
+      "product_listing_screenshot_and_return_policy",
+      "refund_transaction_id_and_processing_date",
+      "customer_correspondence_prior_to_dispute"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Chargebacks911, Mastercard reason code 4853 (Cardholder Dispute)"
+  },
+  {
+    "code": "4837",
+    "network": "mastercard",
+    "category": "fraud",
+    "title": "No Cardholder Authorization",
+    "short_description": "Issued when the cardholder claims they did not authorize or participate in the transaction.",
+    "required_evidence": [
+      "3d_secure_authentication_data",
+      "signed_sales_draft",
+      "ip_address_log"
+    ],
+    "typical_defenses": [
+      "liability_shift_proof",
+      "signed_proof_of_delivery",
+      "matched_avs_cvv_response"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Fraud-Related Chargeback"
+  },
+  {
+    "code": "4849",
+    "network": "mastercard",
+    "category": "fraud",
+    "title": "Questionable Merchant Activity",
+    "short_description": "Raised when an acquirer or network flags the transaction due to potential fraudulent or suspicious merchant behavior.",
+    "required_evidence": [
+      "merchant_fulfillment_proof",
+      "customer_identity_verification",
+      "transaction_log_history"
+    ],
+    "typical_defenses": [
+      "legitimate_business_proof",
+      "proof_of_fulfillment",
+      "valid_contract"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Fraud-Related Chargeback"
+  },
+  {
+    "code": "4870",
+    "network": "mastercard",
+    "category": "fraud",
+    "title": "Chip Liability Shift",
+    "short_description": "Occurs when a fraudulent EMV transaction was processed at a non-EMV compliant terminal, shifting liability to the merchant.",
+    "required_evidence": [
+      "emv_pos_terminal_data",
+      "chip_transaction_log",
+      "emv_compliance_record"
+    ],
+    "typical_defenses": [
+      "proof_of_chip_read",
+      "fallback_transaction_proof",
+      "terminal_emv_certification"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Fraud-Related Chargeback"
+  },
+  {
+    "code": "4871",
+    "network": "mastercard",
+    "category": "fraud",
+    "title": "Chip Liability Shift \u2014 Lost/Stolen/Never Received Issue (NRI) Fraud",
+    "short_description": "Applies when a lost, stolen, or NRI card was fraudulently used at a terminal that did not support EMV PIN verification.",
+    "required_evidence": [
+      "pin_verification_log",
+      "emv_chip_data_record",
+      "pos_entry_mode_log"
+    ],
+    "typical_defenses": [
+      "proof_of_online_pin",
+      "valid_chip_and_pin_auth",
+      "terminal_cap_data"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Fraud-Related Chargeback"
+  },
+  {
+    "code": "4850",
+    "network": "mastercard",
+    "category": "consumer_dispute",
+    "title": "Installment Billing Dispute",
+    "short_description": "Raised when the cardholder disputes an installment transaction charge or terms.",
+    "required_evidence": [
+      "signed_installment_agreement",
+      "payment_schedule_terms",
+      "recurring_billing_consent"
+    ],
+    "typical_defenses": [
+      "proof_of_agreed_terms",
+      "installment_plan_disclosure",
+      "prior_successful_payments"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Miscellaneous Chargebacks"
+  },
+  {
+    "code": "4854",
+    "network": "mastercard",
+    "category": "consumer_dispute",
+    "title": "Cardholder Dispute Not Classified Elsewhere (US)",
+    "short_description": "Used in the US region for general cardholder disputes that do not fit into other specific categories.",
+    "required_evidence": [
+      "customer_correspondence",
+      "proof_of_service_delivery",
+      "terms_and_conditions"
+    ],
+    "typical_defenses": [
+      "fulfilled_contract_proof",
+      "communication_history",
+      "refund_policy_disclosure"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Miscellaneous Chargebacks"
+  },
+  {
+    "code": "4807",
+    "network": "mastercard",
+    "category": "authorization",
+    "title": "Warning Bulletin File",
+    "short_description": "Legacy reason code previously used when a transaction was completed despite being listed on an authorization warning bulletin.",
+    "required_evidence": [
+      "historical_auth_log",
+      "terminal_batch_record",
+      "transaction_receipt"
+    ],
+    "typical_defenses": [
+      "legacy_auth_approval",
+      "valid_pos_entry_proof",
+      "exception_file_clearance"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Legacy Reason Codes"
+  },
+  {
+    "code": "4812",
+    "network": "mastercard",
+    "category": "authorization",
+    "title": "Account Number Not on File",
+    "short_description": "Legacy reason code used when an authorization attempt involved an account number that did not exist on the issuer file.",
+    "required_evidence": [
+      "authorization_request_log",
+      "issuer_response_data",
+      "pos_entry_mode"
+    ],
+    "typical_defenses": [
+      "proof_of_valid_auth",
+      "issuer_approval_code",
+      "system_audit_trail"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Legacy Reason Codes"
+  },
+  {
+    "code": "4859",
+    "network": "mastercard",
+    "category": "consumer_dispute",
+    "title": "No Show / Addendum Dispute",
+    "short_description": "Legacy reason code for disputes related to hotel no-show charges or addendum fees.",
+    "required_evidence": [
+      "reservation_terms_and_conditions",
+      "cancellation_policy_proof",
+      "itemized_addendum_bill"
+    ],
+    "typical_defenses": [
+      "signed_hotel_registration",
+      "disclosed_no_show_policy",
+      "itemized_damage_receipts"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Legacy Reason Codes"
+  },
+  {
+    "code": "4860",
+    "network": "mastercard",
+    "category": "consumer_dispute",
+    "title": "Credit Not Processed",
+    "short_description": "Legacy reason code used when a merchant agreed to process a refund or credit but failed to do so.",
+    "required_evidence": [
+      "proof_credit_issued",
+      "cancellation_policy",
+      "merchant_communication"
+    ],
+    "typical_defenses": [
+      "credit_transaction_receipt",
+      "proof_of_non_returnable_item",
+      "refund_policy_acknowledgement"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Legacy Reason Codes"
+  },
+    {
+    "code": "4855",
+    "network": "mastercard",
+    "category": "consumer_dispute",
+    "title": "Goods or Services Not Provided",
+    "short_description": "Cardholder claims they paid for goods or services but never received them. Applies to physical goods, digital deliverables, and services.",
+    "required_evidence": [
+      "proof_of_delivery",
+      "tracking_number_with_carrier_name",
+      "signed_delivery_confirmation_if_over_threshold",
+      "customer_communication_showing_receipt",
+      "download_or_access_logs_for_digital_goods",
+      "service_completion_documentation"
+    ],
+    "typical_defenses": [
+      "carrier_tracking_showing_delivery_to_billing_address",
+      "signed_proof_of_delivery_for_high_value_orders",
+      "digital_product_download_timestamp",
+      "customer_email_confirming_receipt",
+      "signed_service_agreement_with_completion_date"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Chargebacks911, Mastercard reason code 4855 (Goods or Services Not Provided)"
+  },
+  {
+    "code": "4831",
+    "network": "mastercard",
+    "category": "processing_error",
+    "title": "Transaction Amount Differs / Paid by Other Means",
+    "short_description": "Legacy reason code used when the billed amount differed from the authorized amount or was settled via another payment method.",
+    "required_evidence": [
+      "itemized_sales_receipt",
+      "proof_of_payment_method",
+      "settlement_record"
+    ],
+    "typical_defenses": [
+      "proof_of_correct_billing",
+      "proof_no_other_payment_received",
+      "signed_order_form"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Legacy Reason Codes"
+  },
+  {
+    "code": "4846",
+    "network": "mastercard",
+    "category": "processing_error",
+    "title": "Correct Transaction Currency Not Provided",
+    "short_description": "Legacy reason code used when a transaction was processed in an unapproved or incorrect currency.",
+    "required_evidence": [
+      "transaction_currency_log",
+      "pos_currency_selection_proof",
+      "cardholder_agreement"
+    ],
+    "typical_defenses": [
+      "proof_currency_choice_accepted",
+      "receipt_showing_currency",
+      "currency_conversion_audit"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Legacy Reason Codes"
+  },
+  {
+    "code": "4841",
+    "network": "mastercard",
+    "category": "cancelled_recurring",
+    "title": "Cancelled Recurring / Digital Goods",
+    "short_description": "Legacy reason code applied to unauthorized recurring transaction charges after cancellation or digital goods issues.",
+    "required_evidence": [
+      "recurring_billing_agreement",
+      "cancellation_policy",
+      "cancellation_request_logs"
+    ],
+    "typical_defenses": [
+      "proof_charge_before_cancellation",
+      "proof_active_subscription",
+      "digital_content_download_log"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Legacy Reason Codes"
+  },
+  {
+    "code": "4842",
+    "network": "mastercard",
+    "category": "processing_error",
+    "title": "Late Presentment",
+    "short_description": "Legacy reason code used when a transaction was submitted for clearing outside the permitted timeframe.",
+    "required_evidence": [
+      "transaction_date_record",
+      "clearing_submission_log",
+      "merchant_settlement_batch"
+    ],
+    "typical_defenses": [
+      "proof_timely_presentment",
+      "network_time_limit_exception_proof",
+      "batch_transmission_ack"
+    ],
+    "deadline_days": 45,
+    "source_citation": "Mastercard Reason Codes: Complete 2026 Dispute Code List - Legacy Reason Codes"
+  },
+  {
+    "code": "10.1",
+    "network": "visa",
+    "category": "fraud",
+    "title": "EMV Liability Shift Counterfeit Fraud",
+    "short_description": "Applies when a counterfeit card transaction was processed at a non-EMV compliant terminal.",
+    "required_evidence": [
+      "terminal_imprint_log",
+      "transaction_receipt",
+      "chip_read_data"
+    ],
+    "typical_defenses": [
+      "proof_of_emv_chip_read",
+      "pin_verification_log",
+      "valid_authorization_code"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Fraud section: 10.1"
+  },
+  {
+    "code": "10.2",
+    "network": "visa",
+    "category": "fraud",
+    "title": "EMV Liability Shift Non-Counterfeit Fraud",
+    "short_description": "Applies to lost or stolen card fraud executed at a terminal that is not EMV compliant.",
+    "required_evidence": [
+      "terminal_transaction_log",
+      "chip_and_pin_data",
+      "merchant_pos_receipt"
+    ],
+    "typical_defenses": [
+      "proof_of_emv_processing",
+      "pin_signature_match",
+      "valid_card_auth"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Fraud section: 10.2"
+  },
+  {
+    "code": "10.3",
+    "network": "visa",
+    "category": "fraud",
+    "title": "Other Fraud \u2014 Card-Present Environment",
+    "short_description": "Covers fraudulent card-present transactions where EMV liability shift does not apply.",
+    "required_evidence": [
+      "signed_sales_receipt",
+      "proof_of_card_imprint",
+      "merchant_log"
+    ],
+    "typical_defenses": [
+      "valid_signature_proof",
+      "card_present_authorization",
+      "terminal_audit_trail"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Fraud section: 10.3"
+  },
+    {
+    "code": "10.4",
+    "network": "visa",
+    "category": "fraud",
+    "title": "Other Fraud — Card-Absent Environment",
+    "short_description": "Cardholder claims they did not authorize a transaction that took place in a card-not-present environment (online, phone, mail order). The most common Visa fraud reason code for e-commerce disputes.",
+    "required_evidence": [
+      "avs_match_result",
+      "cvv2_match_result",
+      "3ds_authentication_result",
+      "device_fingerprint_or_ip_history",
+      "customer_login_and_order_history",
+      "delivery_address_matches_billing_address"
+    ],
+    "typical_defenses": [
+      "3ds_liability_shift_authenticated_transaction",
+      "avs_and_cvv2_full_match_on_billing_address",
+      "prior_undisputed_orders_from_same_account",
+      "ip_geolocation_matches_billing_or_delivery_address",
+      "signed_delivery_confirmation_at_billing_address"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Chargebacks911, Visa reason code 10.4 (Other Fraud, Card-Absent Environment)"
+  },
+  {
+    "code": "10.5",
+    "network": "visa",
+    "category": "fraud",
+    "title": "Visa Fraud Monitoring Program",
+    "short_description": "Identifies transactions disputed under Visa fraud monitoring threshold programs.",
+    "required_evidence": [
+      "transaction_logs",
+      "proof_of_purchase",
+      "cardholder_identity_match"
+    ],
+    "typical_defenses": [
+      "proof_of_legitimate_sale",
+      "fraud_scrubbing_logs",
+      "refund_proof"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Fraud section: 10.5"
+  },
+  {
+    "code": "11.1",
+    "network": "visa",
+    "category": "authorization",
+    "title": "Card Recovery Bulletin",
+    "short_description": "Transaction was processed on a card listed in the Card Recovery Bulletin.",
+    "required_evidence": [
+      "authorization_approval_code",
+      "pos_terminal_log",
+      "transaction_timestamp"
+    ],
+    "typical_defenses": [
+      "proof_of_valid_authorization",
+      "system_approval_record",
+      "bulletin_clearance_proof"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Authorization Errors section: 11.1"
+  },
+  {
+    "code": "11.2",
+    "network": "visa",
+    "category": "authorization",
+    "title": "Declined Authorization",
+    "short_description": "Merchant processed a transaction despite receiving a declined authorization response.",
+    "required_evidence": [
+      "auth_response_log",
+      "transaction_receipt",
+      "pos_data"
+    ],
+    "typical_defenses": [
+      "proof_of_approved_auth",
+      "subsequent_valid_auth",
+      "error_log_rectification"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Authorization Errors section: 11.2"
+  },
+  {
+    "code": "11.3",
+    "network": "visa",
+    "category": "authorization",
+    "title": "No Authorization/Late Presentment",
+    "short_description": "Transaction was settled without prior authorization or presented outside required timeframes.",
+    "required_evidence": [
+      "authorization_code_proof",
+      "settlement_timestamp_log",
+      "batch_processing_record"
+    ],
+    "typical_defenses": [
+      "valid_auth_code_record",
+      "timely_presentment_proof",
+      "stand_in_processing_approval"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Authorization Errors section: 11.3"
+  },
+  {
+    "code": "12.2",
+    "network": "visa",
+    "category": "processing_error",
+    "title": "Incorrect Transaction Code",
+    "short_description": "The transaction was processed with an invalid or improper transaction code.",
+    "required_evidence": [
+      "transaction_processing_log",
+      "sales_receipt_data",
+      "terminal_batch_details"
+    ],
+    "typical_defenses": [
+      "correct_code_submission_proof",
+      "settlement_reconciliation_log",
+      "merchant_category_proof"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Processing Errors section: 12.2"
+  },
+  {
+    "code": "12.3",
+    "network": "visa",
+    "category": "processing_error",
+    "title": "Incorrect Currency",
+    "short_description": "The transaction currency transmitted differs from the currency agreed upon.",
+    "required_evidence": [
+      "cardholder_invoice",
+      "pos_currency_log",
+      "currency_conversion_proof"
+    ],
+    "typical_defenses": [
+      "signed_receipt_showing_currency",
+      "cardholder_agreement_doc",
+      "settlement_currency_log"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Processing Errors section: 12.3"
+  },
+  {
+    "code": "12.4",
+    "network": "visa",
+    "category": "processing_error",
+    "title": "Incorrect Account Number",
+    "short_description": "The transaction was processed using an incorrect account number.",
+    "required_evidence": [
+      "original_sales_slip",
+      "pos_entry_record",
+      "settlement_batch_log"
+    ],
+    "typical_defenses": [
+      "proof_of_correct_account_number",
+      "cardholder_signed_voucher",
+      "tokenized_pan_log"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Processing Errors section: 12.4"
+  },
+  {
+    "code": "12.5",
+    "network": "visa",
+    "category": "processing_error",
+    "title": "Incorrect Amount",
+    "short_description": "The processed transaction amount differs from the agreed or authorized amount.",
+    "required_evidence": [
+      "itemized_order_receipt",
+      "authorization_log",
+      "cardholder_signed_invoice"
+    ],
+    "typical_defenses": [
+      "proof_of_authorized_amount",
+      "cardholder_signature_match",
+      "partial_refund_receipt"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Processing Errors section: 12.5"
+  },
+  {
+    "code": "12.6.1",
+    "network": "visa",
+    "category": "processing_error",
+    "title": "Duplicate Processing",
+    "short_description": "A single transaction was processed and submitted multiple times.",
+    "required_evidence": [
+      "separate_transaction_receipts",
+      "order_logs",
+      "proof_distinct_purchases"
+    ],
+    "typical_defenses": [
+      "proof_of_two_distinct_orders",
+      "refund_credit_voucher",
+      "different_authorization_codes"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Processing Errors section: 12.6.1"
+  },
+  {
+    "code": "12.6.2",
+    "network": "visa",
+    "category": "processing_error",
+    "title": "Paid by Other Means",
+    "short_description": "Cardholder paid for the transaction using another payment method but was billed on this card.",
+    "required_evidence": [
+      "cash_register_receipt",
+      "merchant_billing_log",
+      "alternative_payment_receipt"
+    ],
+    "typical_defenses": [
+      "proof_card_was_intended_payment",
+      "signed_card_voucher",
+      "absence_of_other_payment_record"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Processing Errors section: 12.6.2"
+  },
+  {
+    "code": "12.7",
+    "network": "visa",
+    "category": "processing_error",
+    "title": "Invalid Data",
+    "short_description": "Transaction data contained invalid or corrupted information.",
+    "required_evidence": [
+      "settlement_data_log",
+      "authorization_payload",
+      "pos_data_record"
+    ],
+    "typical_defenses": [
+      "valid_transaction_data_proof",
+      "corrected_data_re-presentment",
+      "network_auth_log"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Processing Errors section: 12.7"
+  },
+    {
+    "code": "13.1",
+    "network": "visa",
+    "category": "consumer_dispute",
+    "title": "Merchandise/Services Not Received",
+    "short_description": "Cardholder claims goods or services were paid for but not received by the agreed-upon delivery date. Applies to physical goods, digital deliverables, and rendered services.",
+    "required_evidence": [
+      "proof_of_delivery_or_service_completion",
+      "tracking_number_with_carrier_name",
+      "agreed_delivery_date_documentation",
+      "customer_communication_confirming_receipt",
+      "digital_access_or_download_logs"
+    ],
+    "typical_defenses": [
+      "carrier_tracking_showing_delivery_before_dispute",
+      "signed_pod_matching_shipping_address",
+      "download_or_login_timestamp_after_purchase",
+      "customer_email_acknowledging_receipt",
+      "service_completion_signature_or_timestamp"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Chargebacks911, Visa reason code 13.1 (Merchandise/Services Not Received)"
+  },
+  {
+    "code": "13.2",
+    "network": "visa",
+    "category": "cancelled_recurring",
+    "title": "Canceled Recurring Transaction",
+    "short_description": "Cardholder claims a recurring payment was billed after a cancellation request.",
+    "required_evidence": [
+      "cancellation_policy",
+      "cardholder_subscription_log",
+      "communication_records"
+    ],
+    "typical_defenses": [
+      "proof_of_late_cancellation",
+      "signed_terms_of_service",
+      "billing_period_usage_log"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Customer Disputes section: 13.2"
+  },
+  {
+    "code": "13.3",
+    "network": "visa",
+    "category": "consumer_dispute",
+    "title": "Not as Described or Defective Merchandise / Services",
+    "short_description": "Cardholder claims goods or services were defective, damaged, or not as advertised.",
+    "required_evidence": [
+      "product_description_doc",
+      "merchant_return_policy",
+      "cardholder_communication"
+    ],
+    "typical_defenses": [
+      "proof_of_accurate_description",
+      "inspection_report",
+      "repair_replacement_offer_proof"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Customer Disputes section: 13.3"
+  },
+  {
+    "code": "13.4",
+    "network": "visa",
+    "category": "consumer_dispute",
+    "title": "Counterfeit Merchandise",
+    "short_description": "Cardholder claims merchandise purchased is counterfeit or fake.",
+    "required_evidence": [
+      "proof_of_authenticity",
+      "authorized_distributor_invoice",
+      "manufacturer_certificate"
+    ],
+    "typical_defenses": [
+      "certificate_of_authenticity",
+      "authorized_reseller_agreement",
+      "licensing_doc"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Customer Disputes section: 13.4"
+  },
+  {
+    "code": "13.5",
+    "network": "visa",
+    "category": "consumer_dispute",
+    "title": "Misrepresentation",
+    "short_description": "Cardholder claims terms of sale or quality of goods/services were misrepresented.",
+    "required_evidence": [
+      "terms_and_conditions",
+      "signed_contract",
+      "sales_listing_screenshot"
+    ],
+    "typical_defenses": [
+      "cardholder_signed_agreement",
+      "clear_terms_disclosure_proof",
+      "customer_email_exchanges"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Customer Disputes section: 13.5"
+  },
+  {
+    "code": "13.6",
+    "network": "visa",
+    "category": "consumer_dispute",
+    "title": "Credit Not Processed",
+    "short_description": "Cardholder was promised a credit or refund that was not posted to the account.",
+    "required_evidence": [
+      "refund_policy",
+      "credit_voucher_log",
+      "merchant_cancellation_log"
+    ],
+    "typical_defenses": [
+      "proof_of_issued_credit",
+      "policy_non_compliance_proof",
+      "store_credit_acceptance_proof"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Customer Disputes section: 13.6"
+  },
+  {
+    "code": "13.7",
+    "network": "visa",
+    "category": "consumer_dispute",
+    "title": "Cancelled Merchandise / Services",
+    "short_description": "Cardholder canceled merchandise or services per policy, but was still charged.",
+    "required_evidence": [
+      "cancellation_policy_terms",
+      "order_cancellation_log",
+      "cardholder_correspondence"
+    ],
+    "typical_defenses": [
+      "non_refundable_policy_proof",
+      "late_cancellation_notice_proof",
+      "services_already_rendered_proof"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Customer Disputes section: 13.7"
+  },
+  {
+    "code": "13.8",
+    "network": "visa",
+    "category": "consumer_dispute",
+    "title": "Original Credit Transaction Not Accepted",
+    "short_description": "Cardholder's bank did not accept an Original Credit Transaction (OCT).",
+    "required_evidence": [
+      "oct_settlement_log",
+      "issuer_response_code",
+      "transaction_receipt"
+    ],
+    "typical_defenses": [
+      "proof_of_valid_oct_processing",
+      "alternative_refund_proof",
+      "bank_rejection_notice"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Customer Disputes section: 13.8"
+  },
+  {
+    "code": "13.9",
+    "network": "visa",
+    "category": "consumer_dispute",
+    "title": "Non-Receipt of Cash at an ATM",
+    "short_description": "Cardholder attempted cash withdrawal at an ATM or load transaction, but did not receive funds.",
+    "required_evidence": [
+      "atm_audit_journal_log",
+      "cash_cassette_reconciliation",
+      "terminal_error_log"
+    ],
+    "typical_defenses": [
+      "proof_of_cash_dispensed",
+      "balanced_atm_cassette_report",
+      "camera_surveillance_log"
+    ],
+    "deadline_days": 30,
+    "source_citation": "Visa Reason Codes List, Customer Disputes section: 13.9"
+  }
+]
