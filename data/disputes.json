@@ -1,0 +1,802 @@
+[
+  {
+    "dispute_id": "disp_2000",
+    "order_id": "ord_1083",
+    "network": "mastercard",
+    "reason_code": "4860",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2000\nTransaction ID: txn_1083\nOrder ID: ord_1083\nAmount: INR 6938.71\nCardholder: Noah Johnson\nNetwork: MASTERCARD\nReason Code: 4860\nReason: Credit Not Processed\nDescription: Legacy reason code used when a merchant agreed to process a refund or credit but failed to do so.\nResponse deadline: 45 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2001",
+    "order_id": "ord_1087",
+    "network": "visa",
+    "reason_code": "12.3",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2001\nTransaction ID: txn_1087\nOrder ID: ord_1087\nAmount: INR 2129.26\nCardholder: Isha Rao\nNetwork: VISA\nReason Code: 12.3\nReason: Incorrect Currency\nDescription: The transaction currency transmitted differs from the currency agreed upon.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2002",
+    "order_id": "ord_1042",
+    "network": "visa",
+    "reason_code": "13.9",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2002\nTransaction ID: txn_1042\nOrder ID: ord_1042\nAmount: INR 24537.18\nCardholder: Kabir Kumar\nNetwork: VISA\nReason Code: 13.9\nReason: Non-Receipt of Cash at an ATM\nDescription: Cardholder attempted cash withdrawal at an ATM or load transaction, but did not receive funds.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2003",
+    "order_id": "ord_1061",
+    "network": "mastercard",
+    "reason_code": "4834",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2003\nTransaction ID: txn_1061\nOrder ID: ord_1061\nAmount: INR 14750.76\nCardholder: Rohan Singh\nNetwork: MASTERCARD\nReason Code: 4834\nReason: Point-of-Interaction Error Chargebacks\nDescription: Applies to errors made when processing a transaction, including duplicate debits, incorrect amounts, currency errors, or late presentment.\nResponse deadline: 45 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2004",
+    "order_id": "ord_1016",
+    "network": "mastercard",
+    "reason_code": "4841",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2004\nTransaction ID: txn_1016\nOrder ID: ord_1016\nAmount: INR 10021.66\nCardholder: Sam Johnson\nNetwork: MASTERCARD\nReason Code: 4841\nReason: Cancelled Recurring / Digital Goods\nDescription: Legacy reason code applied to unauthorized recurring transaction charges after cancellation or digital goods issues.\nResponse deadline: 45 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2005",
+    "order_id": "ord_1084",
+    "network": "visa",
+    "reason_code": "10.1",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2005\nTransaction ID: txn_1084\nOrder ID: ord_1084\nAmount: INR 21136.96\nCardholder: Ananya Reddy\nNetwork: VISA\nReason Code: 10.1\nReason: EMV Liability Shift Counterfeit Fraud\nDescription: Applies when a counterfeit card transaction was processed at a non-EMV compliant terminal.\nResponse deadline: 30 days from 2026-08-31",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2006",
+    "order_id": "ord_1032",
+    "network": "visa",
+    "reason_code": "12.2",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2006\nTransaction ID: txn_1032\nOrder ID: ord_1032\nAmount: INR 17595.33\nCardholder: Sam Smith\nNetwork: VISA\nReason Code: 12.2\nReason: Incorrect Transaction Code\nDescription: The transaction was processed with an invalid or improper transaction code.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2007",
+    "order_id": "ord_1054",
+    "network": "mastercard",
+    "reason_code": "4855",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2007\nTransaction ID: txn_1054\nOrder ID: ord_1054\nAmount: INR 1784.17\nCardholder: Priya Rao\nNetwork: MASTERCARD\nReason Code: 4855\nReason: Goods or Services Not Provided\nDescription: Cardholder claims they paid for goods or services but never received them. Applies to physical goods, digital deliverables, and services.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2008",
+    "order_id": "ord_1020",
+    "network": "visa",
+    "reason_code": "11.1",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2008\nTransaction ID: txn_1020\nOrder ID: ord_1020\nAmount: INR 8017.17\nCardholder: Isha Nair\nNetwork: VISA\nReason Code: 11.1\nReason: Card Recovery Bulletin\nDescription: Transaction was processed on a card listed in the Card Recovery Bulletin.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2009",
+    "order_id": "ord_1097",
+    "network": "visa",
+    "reason_code": "10.1",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2009\nTransaction ID: txn_1097\nOrder ID: ord_1097\nAmount: INR 2783.15\nCardholder: Arjun Singh\nNetwork: VISA\nReason Code: 10.1\nReason: EMV Liability Shift Counterfeit Fraud\nDescription: Applies when a counterfeit card transaction was processed at a non-EMV compliant terminal.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2010",
+    "order_id": "ord_1069",
+    "network": "visa",
+    "reason_code": "13.3",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2010\nTransaction ID: txn_1069\nOrder ID: ord_1069\nAmount: INR 11729.58\nCardholder: Noah Davis\nNetwork: VISA\nReason Code: 13.3\nReason: Not as Described or Defective Merchandise / Services\nDescription: Cardholder claims goods or services were defective, damaged, or not as advertised.\nResponse deadline: 30 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2011",
+    "order_id": "ord_1008",
+    "network": "mastercard",
+    "reason_code": "4849",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2011\nTransaction ID: txn_1008\nOrder ID: ord_1008\nAmount: INR 3035.80\nCardholder: Diya Rao\nNetwork: MASTERCARD\nReason Code: 4849\nReason: Questionable Merchant Activity\nDescription: Raised when an acquirer or network flags the transaction due to potential fraudulent or suspicious merchant behavior.\nResponse deadline: 45 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2012",
+    "order_id": "ord_1015",
+    "network": "mastercard",
+    "reason_code": "4808",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2012\nTransaction ID: txn_1015\nOrder ID: ord_1015\nAmount: INR 15813.33\nCardholder: Meera Davis\nNetwork: MASTERCARD\nReason Code: 4808\nReason: Authorization-Related Chargebacks\nDescription: Used when an error occurred in requesting authorization for a transaction, such as missing authorization, expired protection period, or multiple requests.\nResponse deadline: 45 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2013",
+    "order_id": "ord_1008",
+    "network": "mastercard",
+    "reason_code": "4842",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2013\nTransaction ID: txn_1008\nOrder ID: ord_1008\nAmount: INR 3035.80\nCardholder: Diya Rao\nNetwork: MASTERCARD\nReason Code: 4842\nReason: Late Presentment\nDescription: Legacy reason code used when a transaction was submitted for clearing outside the permitted timeframe.\nResponse deadline: 45 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2014",
+    "order_id": "ord_1014",
+    "network": "visa",
+    "reason_code": "12.4",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2014\nTransaction ID: txn_1014\nOrder ID: ord_1014\nAmount: INR 1981.03\nCardholder: Noah Iyer\nNetwork: VISA\nReason Code: 12.4\nReason: Incorrect Account Number\nDescription: The transaction was processed using an incorrect account number.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2015",
+    "order_id": "ord_1015",
+    "network": "visa",
+    "reason_code": "12.7",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2015\nTransaction ID: txn_1015\nOrder ID: ord_1015\nAmount: INR 15813.33\nCardholder: Meera Davis\nNetwork: VISA\nReason Code: 12.7\nReason: Invalid Data\nDescription: Transaction data contained invalid or corrupted information.\nResponse deadline: 30 days from 2026-08-31",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2016",
+    "order_id": "ord_1059",
+    "network": "visa",
+    "reason_code": "12.7",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2016\nTransaction ID: txn_1059\nOrder ID: ord_1059\nAmount: INR 11491.98\nCardholder: Diya Johnson\nNetwork: VISA\nReason Code: 12.7\nReason: Invalid Data\nDescription: Transaction data contained invalid or corrupted information.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2017",
+    "order_id": "ord_1061",
+    "network": "visa",
+    "reason_code": "13.7",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2017\nTransaction ID: txn_1061\nOrder ID: ord_1061\nAmount: INR 14750.76\nCardholder: Rohan Singh\nNetwork: VISA\nReason Code: 13.7\nReason: Cancelled Merchandise / Services\nDescription: Cardholder canceled merchandise or services per policy, but was still charged.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2018",
+    "order_id": "ord_1010",
+    "network": "visa",
+    "reason_code": "10.5",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2018\nTransaction ID: txn_1010\nOrder ID: ord_1010\nAmount: INR 9011.92\nCardholder: Sam Brown\nNetwork: VISA\nReason Code: 10.5\nReason: Visa Fraud Monitoring Program\nDescription: Identifies transactions disputed under Visa fraud monitoring threshold programs.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2019",
+    "order_id": "ord_1045",
+    "network": "mastercard",
+    "reason_code": "4859",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2019\nTransaction ID: txn_1045\nOrder ID: ord_1045\nAmount: INR 4956.29\nCardholder: Olivia Iyer\nNetwork: MASTERCARD\nReason Code: 4859\nReason: No Show / Addendum Dispute\nDescription: Legacy reason code for disputes related to hotel no-show charges or addendum fees.\nResponse deadline: 45 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2020",
+    "order_id": "ord_1024",
+    "network": "visa",
+    "reason_code": "13.2",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2020\nTransaction ID: txn_1024\nOrder ID: ord_1024\nAmount: INR 14277.15\nCardholder: Priya Smith\nNetwork: VISA\nReason Code: 13.2\nReason: Canceled Recurring Transaction\nDescription: Cardholder claims a recurring payment was billed after a cancellation request.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2021",
+    "order_id": "ord_1092",
+    "network": "mastercard",
+    "reason_code": "4834",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2021\nTransaction ID: txn_1092\nOrder ID: ord_1092\nAmount: INR 23025.46\nCardholder: Kabir Patel\nNetwork: MASTERCARD\nReason Code: 4834\nReason: Point-of-Interaction Error Chargebacks\nDescription: Applies to errors made when processing a transaction, including duplicate debits, incorrect amounts, currency errors, or late presentment.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2022",
+    "order_id": "ord_1098",
+    "network": "mastercard",
+    "reason_code": "4870",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2022\nTransaction ID: txn_1098\nOrder ID: ord_1098\nAmount: INR 15358.85\nCardholder: Ananya Rao\nNetwork: MASTERCARD\nReason Code: 4870\nReason: Chip Liability Shift\nDescription: Occurs when a fraudulent EMV transaction was processed at a non-EMV compliant terminal, shifting liability to the merchant.\nResponse deadline: 45 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2023",
+    "order_id": "ord_1020",
+    "network": "mastercard",
+    "reason_code": "4807",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2023\nTransaction ID: txn_1020\nOrder ID: ord_1020\nAmount: INR 8017.17\nCardholder: Isha Nair\nNetwork: MASTERCARD\nReason Code: 4807\nReason: Warning Bulletin File\nDescription: Legacy reason code previously used when a transaction was completed despite being listed on an authorization warning bulletin.\nResponse deadline: 45 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2024",
+    "order_id": "ord_1020",
+    "network": "visa",
+    "reason_code": "13.1",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2024\nTransaction ID: txn_1020\nOrder ID: ord_1020\nAmount: INR 8017.17\nCardholder: Isha Nair\nNetwork: VISA\nReason Code: 13.1\nReason: Merchandise/Services Not Received\nDescription: Cardholder claims goods or services were paid for but not received by the agreed-upon delivery date. Applies to physical goods, digital deliverables, and rendered services.\nResponse deadline: 30 days from 2026-08-31",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2025",
+    "order_id": "ord_1068",
+    "network": "mastercard",
+    "reason_code": "4860",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2025\nTransaction ID: txn_1068\nOrder ID: ord_1068\nAmount: INR 7131.39\nCardholder: Vihaan Davis\nNetwork: MASTERCARD\nReason Code: 4860\nReason: Credit Not Processed\nDescription: Legacy reason code used when a merchant agreed to process a refund or credit but failed to do so.\nResponse deadline: 45 days from 2026-09-01",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2026",
+    "order_id": "ord_1096",
+    "network": "visa",
+    "reason_code": "13.8",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2026\nTransaction ID: txn_1096\nOrder ID: ord_1096\nAmount: INR 22425.59\nCardholder: Ava Nair\nNetwork: VISA\nReason Code: 13.8\nReason: Original Credit Transaction Not Accepted\nDescription: Cardholder's bank did not accept an Original Credit Transaction (OCT).\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2027",
+    "order_id": "ord_1003",
+    "network": "visa",
+    "reason_code": "10.4",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2027\nTransaction ID: txn_1003\nOrder ID: ord_1003\nAmount: INR 17420.05\nCardholder: Vihaan Johnson\nNetwork: VISA\nReason Code: 10.4\nReason: Other Fraud \u2014 Card-Absent Environment\nDescription: Cardholder claims they did not authorize a transaction that took place in a card-not-present environment (online, phone, mail order). The most common Visa fraud reason code for e-commerce disputes.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2028",
+    "order_id": "ord_1096",
+    "network": "visa",
+    "reason_code": "12.3",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2028\nTransaction ID: txn_1096\nOrder ID: ord_1096\nAmount: INR 22425.59\nCardholder: Ava Nair\nNetwork: VISA\nReason Code: 12.3\nReason: Incorrect Currency\nDescription: The transaction currency transmitted differs from the currency agreed upon.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2029",
+    "order_id": "ord_1065",
+    "network": "visa",
+    "reason_code": "11.3",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2029\nTransaction ID: txn_1065\nOrder ID: ord_1065\nAmount: INR 5248.81\nCardholder: Meera Reddy\nNetwork: VISA\nReason Code: 11.3\nReason: No Authorization/Late Presentment\nDescription: Transaction was settled without prior authorization or presented outside required timeframes.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2030",
+    "order_id": "ord_1021",
+    "network": "mastercard",
+    "reason_code": "4860",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2030\nTransaction ID: txn_1021\nOrder ID: ord_1021\nAmount: INR 6818.22\nCardholder: Arjun Johnson\nNetwork: MASTERCARD\nReason Code: 4860\nReason: Credit Not Processed\nDescription: Legacy reason code used when a merchant agreed to process a refund or credit but failed to do so.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2031",
+    "order_id": "ord_1081",
+    "network": "visa",
+    "reason_code": "12.6.1",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2031\nTransaction ID: txn_1081\nOrder ID: ord_1081\nAmount: INR 13678.44\nCardholder: Sam Reddy\nNetwork: VISA\nReason Code: 12.6.1\nReason: Duplicate Processing\nDescription: A single transaction was processed and submitted multiple times.\nResponse deadline: 30 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2032",
+    "order_id": "ord_1095",
+    "network": "mastercard",
+    "reason_code": "4849",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2032\nTransaction ID: txn_1095\nOrder ID: ord_1095\nAmount: INR 9978.67\nCardholder: Ava Nair\nNetwork: MASTERCARD\nReason Code: 4849\nReason: Questionable Merchant Activity\nDescription: Raised when an acquirer or network flags the transaction due to potential fraudulent or suspicious merchant behavior.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2033",
+    "order_id": "ord_1029",
+    "network": "visa",
+    "reason_code": "12.6.2",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2033\nTransaction ID: txn_1029\nOrder ID: ord_1029\nAmount: INR 11542.86\nCardholder: Liam Reddy\nNetwork: VISA\nReason Code: 12.6.2\nReason: Paid by Other Means\nDescription: Cardholder paid for the transaction using another payment method but was billed on this card.\nResponse deadline: 30 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2034",
+    "order_id": "ord_1098",
+    "network": "visa",
+    "reason_code": "12.5",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2034\nTransaction ID: txn_1098\nOrder ID: ord_1098\nAmount: INR 15358.85\nCardholder: Ananya Rao\nNetwork: VISA\nReason Code: 12.5\nReason: Incorrect Amount\nDescription: The processed transaction amount differs from the agreed or authorized amount.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2035",
+    "order_id": "ord_1041",
+    "network": "visa",
+    "reason_code": "13.9",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2035\nTransaction ID: txn_1041\nOrder ID: ord_1041\nAmount: INR 9346.09\nCardholder: Diya Brown\nNetwork: VISA\nReason Code: 13.9\nReason: Non-Receipt of Cash at an ATM\nDescription: Cardholder attempted cash withdrawal at an ATM or load transaction, but did not receive funds.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2036",
+    "order_id": "ord_1025",
+    "network": "mastercard",
+    "reason_code": "4853",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2036\nTransaction ID: txn_1025\nOrder ID: ord_1025\nAmount: INR 13892.07\nCardholder: Emma Johnson\nNetwork: MASTERCARD\nReason Code: 4853\nReason: Cardholder Dispute\nDescription: Catch-all consumer dispute code covering non-receipt, cancelled recurring transactions, defective or not-as-described goods, credit not processed, and quality complaints. Winning evidence depends on the specific sub-reason cited.\nResponse deadline: 45 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2037",
+    "order_id": "ord_1057",
+    "network": "mastercard",
+    "reason_code": "4860",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2037\nTransaction ID: txn_1057\nOrder ID: ord_1057\nAmount: INR 20802.84\nCardholder: Ava Brown\nNetwork: MASTERCARD\nReason Code: 4860\nReason: Credit Not Processed\nDescription: Legacy reason code used when a merchant agreed to process a refund or credit but failed to do so.\nResponse deadline: 45 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2038",
+    "order_id": "ord_1073",
+    "network": "visa",
+    "reason_code": "10.5",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2038\nTransaction ID: txn_1073\nOrder ID: ord_1073\nAmount: INR 21115.06\nCardholder: Sam Singh\nNetwork: VISA\nReason Code: 10.5\nReason: Visa Fraud Monitoring Program\nDescription: Identifies transactions disputed under Visa fraud monitoring threshold programs.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2039",
+    "order_id": "ord_1085",
+    "network": "visa",
+    "reason_code": "11.1",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2039\nTransaction ID: txn_1085\nOrder ID: ord_1085\nAmount: INR 10655.88\nCardholder: Ava Rao\nNetwork: VISA\nReason Code: 11.1\nReason: Card Recovery Bulletin\nDescription: Transaction was processed on a card listed in the Card Recovery Bulletin.\nResponse deadline: 30 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2040",
+    "order_id": "ord_1043",
+    "network": "visa",
+    "reason_code": "12.2",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2040\nTransaction ID: txn_1043\nOrder ID: ord_1043\nAmount: INR 22063.08\nCardholder: Diya Nair\nNetwork: VISA\nReason Code: 12.2\nReason: Incorrect Transaction Code\nDescription: The transaction was processed with an invalid or improper transaction code.\nResponse deadline: 30 days from 2026-08-31",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2041",
+    "order_id": "ord_1000",
+    "network": "visa",
+    "reason_code": "10.3",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2041\nTransaction ID: txn_1000\nOrder ID: ord_1000\nAmount: INR 6366.58\nCardholder: Emma Reddy\nNetwork: VISA\nReason Code: 10.3\nReason: Other Fraud \u2014 Card-Present Environment\nDescription: Covers fraudulent card-present transactions where EMV liability shift does not apply.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2042",
+    "order_id": "ord_1010",
+    "network": "mastercard",
+    "reason_code": "4854",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2042\nTransaction ID: txn_1010\nOrder ID: ord_1010\nAmount: INR 9011.92\nCardholder: Sam Brown\nNetwork: MASTERCARD\nReason Code: 4854\nReason: Cardholder Dispute Not Classified Elsewhere (US)\nDescription: Used in the US region for general cardholder disputes that do not fit into other specific categories.\nResponse deadline: 45 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2043",
+    "order_id": "ord_1076",
+    "network": "visa",
+    "reason_code": "13.1",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2043\nTransaction ID: txn_1076\nOrder ID: ord_1076\nAmount: INR 22991.27\nCardholder: Vihaan Patel\nNetwork: VISA\nReason Code: 13.1\nReason: Merchandise/Services Not Received\nDescription: Cardholder claims goods or services were paid for but not received by the agreed-upon delivery date. Applies to physical goods, digital deliverables, and rendered services.\nResponse deadline: 30 days from 2026-08-31",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2044",
+    "order_id": "ord_1098",
+    "network": "mastercard",
+    "reason_code": "4850",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2044\nTransaction ID: txn_1098\nOrder ID: ord_1098\nAmount: INR 15358.85\nCardholder: Ananya Rao\nNetwork: MASTERCARD\nReason Code: 4850\nReason: Installment Billing Dispute\nDescription: Raised when the cardholder disputes an installment transaction charge or terms.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2045",
+    "order_id": "ord_1017",
+    "network": "visa",
+    "reason_code": "12.6.1",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2045\nTransaction ID: txn_1017\nOrder ID: ord_1017\nAmount: INR 22406.79\nCardholder: Ava Iyer\nNetwork: VISA\nReason Code: 12.6.1\nReason: Duplicate Processing\nDescription: A single transaction was processed and submitted multiple times.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2046",
+    "order_id": "ord_1070",
+    "network": "visa",
+    "reason_code": "13.3",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2046\nTransaction ID: txn_1070\nOrder ID: ord_1070\nAmount: INR 24535.87\nCardholder: Diya Iyer\nNetwork: VISA\nReason Code: 13.3\nReason: Not as Described or Defective Merchandise / Services\nDescription: Cardholder claims goods or services were defective, damaged, or not as advertised.\nResponse deadline: 30 days from 2026-08-31",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2047",
+    "order_id": "ord_1097",
+    "network": "visa",
+    "reason_code": "10.4",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2047\nTransaction ID: txn_1097\nOrder ID: ord_1097\nAmount: INR 2783.15\nCardholder: Arjun Singh\nNetwork: VISA\nReason Code: 10.4\nReason: Other Fraud \u2014 Card-Absent Environment\nDescription: Cardholder claims they did not authorize a transaction that took place in a card-not-present environment (online, phone, mail order). The most common Visa fraud reason code for e-commerce disputes.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2048",
+    "order_id": "ord_1079",
+    "network": "mastercard",
+    "reason_code": "4853",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2048\nTransaction ID: txn_1079\nOrder ID: ord_1079\nAmount: INR 14651.26\nCardholder: Aarav Singh\nNetwork: MASTERCARD\nReason Code: 4853\nReason: Cardholder Dispute\nDescription: Catch-all consumer dispute code covering non-receipt, cancelled recurring transactions, defective or not-as-described goods, credit not processed, and quality complaints. Winning evidence depends on the specific sub-reason cited.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2049",
+    "order_id": "ord_1040",
+    "network": "mastercard",
+    "reason_code": "4846",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2049\nTransaction ID: txn_1040\nOrder ID: ord_1040\nAmount: INR 17878.76\nCardholder: Vihaan Smith\nNetwork: MASTERCARD\nReason Code: 4846\nReason: Correct Transaction Currency Not Provided\nDescription: Legacy reason code used when a transaction was processed in an unapproved or incorrect currency.\nResponse deadline: 45 days from 2026-09-01",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2050",
+    "order_id": "ord_1068",
+    "network": "visa",
+    "reason_code": "12.3",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2050\nTransaction ID: txn_1068\nOrder ID: ord_1068\nAmount: INR 7131.39\nCardholder: Vihaan Davis\nNetwork: VISA\nReason Code: 12.3\nReason: Incorrect Currency\nDescription: The transaction currency transmitted differs from the currency agreed upon.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2051",
+    "order_id": "ord_1004",
+    "network": "mastercard",
+    "reason_code": "4871",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2051\nTransaction ID: txn_1004\nOrder ID: ord_1004\nAmount: INR 19801.79\nCardholder: Meera Reddy\nNetwork: MASTERCARD\nReason Code: 4871\nReason: Chip Liability Shift \u2014 Lost/Stolen/Never Received Issue (NRI) Fraud\nDescription: Applies when a lost, stolen, or NRI card was fraudulently used at a terminal that did not support EMV PIN verification.\nResponse deadline: 45 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2052",
+    "order_id": "ord_1038",
+    "network": "mastercard",
+    "reason_code": "4854",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2052\nTransaction ID: txn_1038\nOrder ID: ord_1038\nAmount: INR 14578.69\nCardholder: Sam Nair\nNetwork: MASTERCARD\nReason Code: 4854\nReason: Cardholder Dispute Not Classified Elsewhere (US)\nDescription: Used in the US region for general cardholder disputes that do not fit into other specific categories.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2053",
+    "order_id": "ord_1033",
+    "network": "visa",
+    "reason_code": "11.2",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2053\nTransaction ID: txn_1033\nOrder ID: ord_1033\nAmount: INR 8070.46\nCardholder: Kabir Kumar\nNetwork: VISA\nReason Code: 11.2\nReason: Declined Authorization\nDescription: Merchant processed a transaction despite receiving a declined authorization response.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2054",
+    "order_id": "ord_1035",
+    "network": "visa",
+    "reason_code": "10.4",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2054\nTransaction ID: txn_1035\nOrder ID: ord_1035\nAmount: INR 2626.55\nCardholder: Rohan Nair\nNetwork: VISA\nReason Code: 10.4\nReason: Other Fraud \u2014 Card-Absent Environment\nDescription: Cardholder claims they did not authorize a transaction that took place in a card-not-present environment (online, phone, mail order). The most common Visa fraud reason code for e-commerce disputes.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2055",
+    "order_id": "ord_1009",
+    "network": "visa",
+    "reason_code": "13.1",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2055\nTransaction ID: txn_1009\nOrder ID: ord_1009\nAmount: INR 19950.53\nCardholder: Olivia Brown\nNetwork: VISA\nReason Code: 13.1\nReason: Merchandise/Services Not Received\nDescription: Cardholder claims goods or services were paid for but not received by the agreed-upon delivery date. Applies to physical goods, digital deliverables, and rendered services.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2056",
+    "order_id": "ord_1009",
+    "network": "visa",
+    "reason_code": "12.6.2",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2056\nTransaction ID: txn_1009\nOrder ID: ord_1009\nAmount: INR 19950.53\nCardholder: Olivia Brown\nNetwork: VISA\nReason Code: 12.6.2\nReason: Paid by Other Means\nDescription: Cardholder paid for the transaction using another payment method but was billed on this card.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2057",
+    "order_id": "ord_1094",
+    "network": "visa",
+    "reason_code": "10.2",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2057\nTransaction ID: txn_1094\nOrder ID: ord_1094\nAmount: INR 16768.89\nCardholder: Kabir Singh\nNetwork: VISA\nReason Code: 10.2\nReason: EMV Liability Shift Non-Counterfeit Fraud\nDescription: Applies to lost or stolen card fraud executed at a terminal that is not EMV compliant.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2058",
+    "order_id": "ord_1002",
+    "network": "mastercard",
+    "reason_code": "4834",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2058\nTransaction ID: txn_1002\nOrder ID: ord_1002\nAmount: INR 20551.37\nCardholder: Sam Patel\nNetwork: MASTERCARD\nReason Code: 4834\nReason: Point-of-Interaction Error Chargebacks\nDescription: Applies to errors made when processing a transaction, including duplicate debits, incorrect amounts, currency errors, or late presentment.\nResponse deadline: 45 days from 2026-09-01",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2059",
+    "order_id": "ord_1041",
+    "network": "mastercard",
+    "reason_code": "4859",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2059\nTransaction ID: txn_1041\nOrder ID: ord_1041\nAmount: INR 9346.09\nCardholder: Diya Brown\nNetwork: MASTERCARD\nReason Code: 4859\nReason: No Show / Addendum Dispute\nDescription: Legacy reason code for disputes related to hotel no-show charges or addendum fees.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2060",
+    "order_id": "ord_1011",
+    "network": "mastercard",
+    "reason_code": "4854",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2060\nTransaction ID: txn_1011\nOrder ID: ord_1011\nAmount: INR 24389.53\nCardholder: Ananya Kumar\nNetwork: MASTERCARD\nReason Code: 4854\nReason: Cardholder Dispute Not Classified Elsewhere (US)\nDescription: Used in the US region for general cardholder disputes that do not fit into other specific categories.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2061",
+    "order_id": "ord_1077",
+    "network": "visa",
+    "reason_code": "13.6",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2061\nTransaction ID: txn_1077\nOrder ID: ord_1077\nAmount: INR 6447.18\nCardholder: Noah Davis\nNetwork: VISA\nReason Code: 13.6\nReason: Credit Not Processed\nDescription: Cardholder was promised a credit or refund that was not posted to the account.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2062",
+    "order_id": "ord_1046",
+    "network": "mastercard",
+    "reason_code": "4850",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2062\nTransaction ID: txn_1046\nOrder ID: ord_1046\nAmount: INR 7464.89\nCardholder: Sam Sharma\nNetwork: MASTERCARD\nReason Code: 4850\nReason: Installment Billing Dispute\nDescription: Raised when the cardholder disputes an installment transaction charge or terms.\nResponse deadline: 45 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2063",
+    "order_id": "ord_1033",
+    "network": "visa",
+    "reason_code": "10.4",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2063\nTransaction ID: txn_1033\nOrder ID: ord_1033\nAmount: INR 8070.46\nCardholder: Kabir Kumar\nNetwork: VISA\nReason Code: 10.4\nReason: Other Fraud \u2014 Card-Absent Environment\nDescription: Cardholder claims they did not authorize a transaction that took place in a card-not-present environment (online, phone, mail order). The most common Visa fraud reason code for e-commerce disputes.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2064",
+    "order_id": "ord_1015",
+    "network": "mastercard",
+    "reason_code": "4859",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2064\nTransaction ID: txn_1015\nOrder ID: ord_1015\nAmount: INR 15813.33\nCardholder: Meera Davis\nNetwork: MASTERCARD\nReason Code: 4859\nReason: No Show / Addendum Dispute\nDescription: Legacy reason code for disputes related to hotel no-show charges or addendum fees.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2065",
+    "order_id": "ord_1027",
+    "network": "visa",
+    "reason_code": "13.5",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2065\nTransaction ID: txn_1027\nOrder ID: ord_1027\nAmount: INR 20373.73\nCardholder: Meera Nair\nNetwork: VISA\nReason Code: 13.5\nReason: Misrepresentation\nDescription: Cardholder claims terms of sale or quality of goods/services were misrepresented.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2066",
+    "order_id": "ord_1029",
+    "network": "mastercard",
+    "reason_code": "4837",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2066\nTransaction ID: txn_1029\nOrder ID: ord_1029\nAmount: INR 11542.86\nCardholder: Liam Reddy\nNetwork: MASTERCARD\nReason Code: 4837\nReason: No Cardholder Authorization\nDescription: Issued when the cardholder claims they did not authorize or participate in the transaction.\nResponse deadline: 45 days from 2026-09-01",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2067",
+    "order_id": "ord_1039",
+    "network": "visa",
+    "reason_code": "13.3",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2067\nTransaction ID: txn_1039\nOrder ID: ord_1039\nAmount: INR 1800.19\nCardholder: Kabir Reddy\nNetwork: VISA\nReason Code: 13.3\nReason: Not as Described or Defective Merchandise / Services\nDescription: Cardholder claims goods or services were defective, damaged, or not as advertised.\nResponse deadline: 30 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2068",
+    "order_id": "ord_1010",
+    "network": "visa",
+    "reason_code": "13.3",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2068\nTransaction ID: txn_1010\nOrder ID: ord_1010\nAmount: INR 9011.92\nCardholder: Sam Brown\nNetwork: VISA\nReason Code: 13.3\nReason: Not as Described or Defective Merchandise / Services\nDescription: Cardholder claims goods or services were defective, damaged, or not as advertised.\nResponse deadline: 30 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2069",
+    "order_id": "ord_1088",
+    "network": "visa",
+    "reason_code": "13.2",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2069\nTransaction ID: txn_1088\nOrder ID: ord_1088\nAmount: INR 5385.54\nCardholder: Olivia Sharma\nNetwork: VISA\nReason Code: 13.2\nReason: Canceled Recurring Transaction\nDescription: Cardholder claims a recurring payment was billed after a cancellation request.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2070",
+    "order_id": "ord_1070",
+    "network": "visa",
+    "reason_code": "10.2",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2070\nTransaction ID: txn_1070\nOrder ID: ord_1070\nAmount: INR 24535.87\nCardholder: Diya Iyer\nNetwork: VISA\nReason Code: 10.2\nReason: EMV Liability Shift Non-Counterfeit Fraud\nDescription: Applies to lost or stolen card fraud executed at a terminal that is not EMV compliant.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2071",
+    "order_id": "ord_1051",
+    "network": "mastercard",
+    "reason_code": "4853",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2071\nTransaction ID: txn_1051\nOrder ID: ord_1051\nAmount: INR 19955.72\nCardholder: Sam Smith\nNetwork: MASTERCARD\nReason Code: 4853\nReason: Cardholder Dispute\nDescription: Catch-all consumer dispute code covering non-receipt, cancelled recurring transactions, defective or not-as-described goods, credit not processed, and quality complaints. Winning evidence depends on the specific sub-reason cited.\nResponse deadline: 45 days from 2026-09-01",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2072",
+    "order_id": "ord_1053",
+    "network": "mastercard",
+    "reason_code": "4870",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2072\nTransaction ID: txn_1053\nOrder ID: ord_1053\nAmount: INR 5503.01\nCardholder: Liam Nair\nNetwork: MASTERCARD\nReason Code: 4870\nReason: Chip Liability Shift\nDescription: Occurs when a fraudulent EMV transaction was processed at a non-EMV compliant terminal, shifting liability to the merchant.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2073",
+    "order_id": "ord_1042",
+    "network": "mastercard",
+    "reason_code": "4842",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2073\nTransaction ID: txn_1042\nOrder ID: ord_1042\nAmount: INR 24537.18\nCardholder: Kabir Kumar\nNetwork: MASTERCARD\nReason Code: 4842\nReason: Late Presentment\nDescription: Legacy reason code used when a transaction was submitted for clearing outside the permitted timeframe.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2074",
+    "order_id": "ord_1006",
+    "network": "mastercard",
+    "reason_code": "4854",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2074\nTransaction ID: txn_1006\nOrder ID: ord_1006\nAmount: INR 3924.54\nCardholder: Olivia Patel\nNetwork: MASTERCARD\nReason Code: 4854\nReason: Cardholder Dispute Not Classified Elsewhere (US)\nDescription: Used in the US region for general cardholder disputes that do not fit into other specific categories.\nResponse deadline: 45 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2075",
+    "order_id": "ord_1012",
+    "network": "visa",
+    "reason_code": "13.5",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2075\nTransaction ID: txn_1012\nOrder ID: ord_1012\nAmount: INR 22115.00\nCardholder: Isha Nair\nNetwork: VISA\nReason Code: 13.5\nReason: Misrepresentation\nDescription: Cardholder claims terms of sale or quality of goods/services were misrepresented.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2076",
+    "order_id": "ord_1013",
+    "network": "visa",
+    "reason_code": "12.6.1",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2076\nTransaction ID: txn_1013\nOrder ID: ord_1013\nAmount: INR 7253.42\nCardholder: Emma Kumar\nNetwork: VISA\nReason Code: 12.6.1\nReason: Duplicate Processing\nDescription: A single transaction was processed and submitted multiple times.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2077",
+    "order_id": "ord_1060",
+    "network": "visa",
+    "reason_code": "11.1",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2077\nTransaction ID: txn_1060\nOrder ID: ord_1060\nAmount: INR 10742.82\nCardholder: Emma Davis\nNetwork: VISA\nReason Code: 11.1\nReason: Card Recovery Bulletin\nDescription: Transaction was processed on a card listed in the Card Recovery Bulletin.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2078",
+    "order_id": "ord_1069",
+    "network": "mastercard",
+    "reason_code": "4871",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2078\nTransaction ID: txn_1069\nOrder ID: ord_1069\nAmount: INR 11729.58\nCardholder: Noah Davis\nNetwork: MASTERCARD\nReason Code: 4871\nReason: Chip Liability Shift \u2014 Lost/Stolen/Never Received Issue (NRI) Fraud\nDescription: Applies when a lost, stolen, or NRI card was fraudulently used at a terminal that did not support EMV PIN verification.\nResponse deadline: 45 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2079",
+    "order_id": "ord_1020",
+    "network": "visa",
+    "reason_code": "13.5",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2079\nTransaction ID: txn_1020\nOrder ID: ord_1020\nAmount: INR 8017.17\nCardholder: Isha Nair\nNetwork: VISA\nReason Code: 13.5\nReason: Misrepresentation\nDescription: Cardholder claims terms of sale or quality of goods/services were misrepresented.\nResponse deadline: 30 days from 2026-08-31",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2080",
+    "order_id": "ord_1031",
+    "network": "mastercard",
+    "reason_code": "4870",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2080\nTransaction ID: txn_1031\nOrder ID: ord_1031\nAmount: INR 4276.22\nCardholder: Ava Smith\nNetwork: MASTERCARD\nReason Code: 4870\nReason: Chip Liability Shift\nDescription: Occurs when a fraudulent EMV transaction was processed at a non-EMV compliant terminal, shifting liability to the merchant.\nResponse deadline: 45 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2081",
+    "order_id": "ord_1021",
+    "network": "mastercard",
+    "reason_code": "4859",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2081\nTransaction ID: txn_1021\nOrder ID: ord_1021\nAmount: INR 6818.22\nCardholder: Arjun Johnson\nNetwork: MASTERCARD\nReason Code: 4859\nReason: No Show / Addendum Dispute\nDescription: Legacy reason code for disputes related to hotel no-show charges or addendum fees.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2082",
+    "order_id": "ord_1072",
+    "network": "mastercard",
+    "reason_code": "4871",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2082\nTransaction ID: txn_1072\nOrder ID: ord_1072\nAmount: INR 14826.51\nCardholder: Olivia Brown\nNetwork: MASTERCARD\nReason Code: 4871\nReason: Chip Liability Shift \u2014 Lost/Stolen/Never Received Issue (NRI) Fraud\nDescription: Applies when a lost, stolen, or NRI card was fraudulently used at a terminal that did not support EMV PIN verification.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2083",
+    "order_id": "ord_1002",
+    "network": "visa",
+    "reason_code": "12.6.1",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2083\nTransaction ID: txn_1002\nOrder ID: ord_1002\nAmount: INR 20551.37\nCardholder: Sam Patel\nNetwork: VISA\nReason Code: 12.6.1\nReason: Duplicate Processing\nDescription: A single transaction was processed and submitted multiple times.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2084",
+    "order_id": "ord_1093",
+    "network": "mastercard",
+    "reason_code": "4854",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2084\nTransaction ID: txn_1093\nOrder ID: ord_1093\nAmount: INR 10373.52\nCardholder: Emma Brown\nNetwork: MASTERCARD\nReason Code: 4854\nReason: Cardholder Dispute Not Classified Elsewhere (US)\nDescription: Used in the US region for general cardholder disputes that do not fit into other specific categories.\nResponse deadline: 45 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2085",
+    "order_id": "ord_1094",
+    "network": "visa",
+    "reason_code": "12.7",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2085\nTransaction ID: txn_1094\nOrder ID: ord_1094\nAmount: INR 16768.89\nCardholder: Kabir Singh\nNetwork: VISA\nReason Code: 12.7\nReason: Invalid Data\nDescription: Transaction data contained invalid or corrupted information.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2086",
+    "order_id": "ord_1052",
+    "network": "mastercard",
+    "reason_code": "4808",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2086\nTransaction ID: txn_1052\nOrder ID: ord_1052\nAmount: INR 4038.59\nCardholder: Vihaan Patel\nNetwork: MASTERCARD\nReason Code: 4808\nReason: Authorization-Related Chargebacks\nDescription: Used when an error occurred in requesting authorization for a transaction, such as missing authorization, expired protection period, or multiple requests.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2087",
+    "order_id": "ord_1066",
+    "network": "mastercard",
+    "reason_code": "4842",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2087\nTransaction ID: txn_1066\nOrder ID: ord_1066\nAmount: INR 1021.08\nCardholder: Meera Johnson\nNetwork: MASTERCARD\nReason Code: 4842\nReason: Late Presentment\nDescription: Legacy reason code used when a transaction was submitted for clearing outside the permitted timeframe.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2088",
+    "order_id": "ord_1093",
+    "network": "mastercard",
+    "reason_code": "4860",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2088\nTransaction ID: txn_1093\nOrder ID: ord_1093\nAmount: INR 10373.52\nCardholder: Emma Brown\nNetwork: MASTERCARD\nReason Code: 4860\nReason: Credit Not Processed\nDescription: Legacy reason code used when a merchant agreed to process a refund or credit but failed to do so.\nResponse deadline: 45 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2089",
+    "order_id": "ord_1070",
+    "network": "mastercard",
+    "reason_code": "4846",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2089\nTransaction ID: txn_1070\nOrder ID: ord_1070\nAmount: INR 24535.87\nCardholder: Diya Iyer\nNetwork: MASTERCARD\nReason Code: 4846\nReason: Correct Transaction Currency Not Provided\nDescription: Legacy reason code used when a transaction was processed in an unapproved or incorrect currency.\nResponse deadline: 45 days from 2026-09-02",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2090",
+    "order_id": "ord_1055",
+    "network": "mastercard",
+    "reason_code": "4855",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2090\nTransaction ID: txn_1055\nOrder ID: ord_1055\nAmount: INR 12879.67\nCardholder: Noah Nair\nNetwork: MASTERCARD\nReason Code: 4855\nReason: Goods or Services Not Provided\nDescription: Cardholder claims they paid for goods or services but never received them. Applies to physical goods, digital deliverables, and services.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2091",
+    "order_id": "ord_1085",
+    "network": "visa",
+    "reason_code": "11.2",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2091\nTransaction ID: txn_1085\nOrder ID: ord_1085\nAmount: INR 10655.88\nCardholder: Ava Rao\nNetwork: VISA\nReason Code: 11.2\nReason: Declined Authorization\nDescription: Merchant processed a transaction despite receiving a declined authorization response.\nResponse deadline: 30 days from 2026-09-02",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2092",
+    "order_id": "ord_1067",
+    "network": "visa",
+    "reason_code": "10.1",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2092\nTransaction ID: txn_1067\nOrder ID: ord_1067\nAmount: INR 6599.13\nCardholder: Diya Brown\nNetwork: VISA\nReason Code: 10.1\nReason: EMV Liability Shift Counterfeit Fraud\nDescription: Applies when a counterfeit card transaction was processed at a non-EMV compliant terminal.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2093",
+    "order_id": "ord_1017",
+    "network": "visa",
+    "reason_code": "11.3",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2093\nTransaction ID: txn_1017\nOrder ID: ord_1017\nAmount: INR 22406.79\nCardholder: Ava Iyer\nNetwork: VISA\nReason Code: 11.3\nReason: No Authorization/Late Presentment\nDescription: Transaction was settled without prior authorization or presented outside required timeframes.\nResponse deadline: 30 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2094",
+    "order_id": "ord_1052",
+    "network": "visa",
+    "reason_code": "13.5",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2094\nTransaction ID: txn_1052\nOrder ID: ord_1052\nAmount: INR 4038.59\nCardholder: Vihaan Patel\nNetwork: VISA\nReason Code: 13.5\nReason: Misrepresentation\nDescription: Cardholder claims terms of sale or quality of goods/services were misrepresented.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2095",
+    "order_id": "ord_1034",
+    "network": "mastercard",
+    "reason_code": "4846",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2095\nTransaction ID: txn_1034\nOrder ID: ord_1034\nAmount: INR 11736.75\nCardholder: Rohan Sharma\nNetwork: MASTERCARD\nReason Code: 4846\nReason: Correct Transaction Currency Not Provided\nDescription: Legacy reason code used when a transaction was processed in an unapproved or incorrect currency.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2096",
+    "order_id": "ord_1015",
+    "network": "visa",
+    "reason_code": "12.2",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2096\nTransaction ID: txn_1015\nOrder ID: ord_1015\nAmount: INR 15813.33\nCardholder: Meera Davis\nNetwork: VISA\nReason Code: 12.2\nReason: Incorrect Transaction Code\nDescription: The transaction was processed with an invalid or improper transaction code.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": false
+  },
+  {
+    "dispute_id": "disp_2097",
+    "order_id": "ord_1082",
+    "network": "visa",
+    "reason_code": "13.6",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2097\nTransaction ID: txn_1082\nOrder ID: ord_1082\nAmount: INR 3448.78\nCardholder: Isha Singh\nNetwork: VISA\nReason Code: 13.6\nReason: Credit Not Processed\nDescription: Cardholder was promised a credit or refund that was not posted to the account.\nResponse deadline: 30 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2098",
+    "order_id": "ord_1000",
+    "network": "mastercard",
+    "reason_code": "4850",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2098\nTransaction ID: txn_1000\nOrder ID: ord_1000\nAmount: INR 6366.58\nCardholder: Emma Reddy\nNetwork: MASTERCARD\nReason Code: 4850\nReason: Installment Billing Dispute\nDescription: Raised when the cardholder disputes an installment transaction charge or terms.\nResponse deadline: 45 days from 2026-09-01",
+    "ground_truth_winnable": true
+  },
+  {
+    "dispute_id": "disp_2099",
+    "order_id": "ord_1075",
+    "network": "mastercard",
+    "reason_code": "4860",
+    "notice_text": "CHARGEBACK NOTICE\nDispute ID: disp_2099\nTransaction ID: txn_1075\nOrder ID: ord_1075\nAmount: INR 14309.66\nCardholder: Isha Reddy\nNetwork: MASTERCARD\nReason Code: 4860\nReason: Credit Not Processed\nDescription: Legacy reason code used when a merchant agreed to process a refund or credit but failed to do so.\nResponse deadline: 45 days from 2026-08-31",
+    "ground_truth_winnable": true
+  }
+]
