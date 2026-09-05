@@ -52,3 +52,15 @@ The interesting numbers are elsewhere:
   representment.
 
 Stating this openly is better than presenting 100% as a headline result.
+
+### 4. Validation was too strict about tool citation coverage
+Check 3 required every tool that returned data to be cited in the letter. But
+`get_transaction_signals` always returns AVS/CVV/3DS data, which is irrelevant
+to a non-receipt dispute (4855) — the question is whether the package arrived,
+not whether the card was authenticated. The LLM correctly omitted it and got
+penalised for being right.
+
+Fix: only require citation of tools whose provided evidence intersects the
+reason code's `required_evidence` set. Fallback rate on the real-world test
+notice went from 100% to 0%, and the resulting LLM letter quoted the customer's
+own receipt confirmation email — a rebuttal the template could never construct.

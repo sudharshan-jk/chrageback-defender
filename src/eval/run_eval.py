@@ -12,7 +12,7 @@ from src.eval.baseline import run_baseline
 from src.eval.judge import judge_letter
 
 N_CASES = int(sys.argv[1]) if len(sys.argv) > 1 else 50
-JUDGE_EVERY = 5  # judge every Nth case to stay inside free-tier limits
+JUDGE_EVERY = 10  # judge every Nth case to stay inside free-tier limits
 
 
 def evidence_summary(case_result) -> str:
@@ -59,9 +59,9 @@ def main():
             summ = evidence_summary(a)
             if agent_letter:
                 agent_score = judge_letter(agent_letter, d["reason_code"], d["network"], summ)["total"]
-                time.sleep(1)
+                time.sleep(6)
             base_score = judge_letter(b.letter_text, d["reason_code"], d["network"], summ)["total"]
-            time.sleep(1)
+            time.sleep(6)
 
         rows.append({
             "dispute_id": d["dispute_id"],
@@ -100,3 +100,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

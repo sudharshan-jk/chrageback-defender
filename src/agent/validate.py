@@ -90,9 +90,13 @@ def validate(rep: Representment, result: GatherResult) -> tuple[ValidationResult
         for c in good_claims
         if CITATION_RE.match(c.citation) and c.citation.startswith("tool:")
     }
+    # Only require citation of tools that provided evidence RELEVANT to this
+    # reason code. get_transaction_signals always returns data, but AVS/CVV is
+    # irrelevant to a non-receipt dispute — the LLM is right to omit it.
+    required_set = set(result.required_evidence)
     gathered_tools = {
         c.tool for c in result.tools_called
-        if c.output.get("evidence_provided")
+        if set(c.output.get("evidence_provided") or []) & required_set
     }
     uncited = gathered_tools - cited_tools
     if uncited:
@@ -110,4 +114,5 @@ def validate(rep: Representment, result: GatherResult) -> tuple[ValidationResult
         stripped_claims=stripped,
         total_claims=total,
     ), cleaned
+
 
